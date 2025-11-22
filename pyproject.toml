@@ -3,14 +3,14 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "arxiv-mcp-server"
-version = "0.3.1"
-description = "A flexible arXiv search and analysis service with MCP protocol support"
+name = "arxiv-mcp-server-cuhksz"
+version = "0.1.1"
+description = "A flexible arXiv search and analysis service with MCP protocol support - CUHKSZ Smart Campus Development Team"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [
-    { name = "Joseph Blazick", email = "blazickjp@amazon.com" }
+    { name = "LKCY23", email = "lkcydream@gmail.com" }
 ]
 dependencies = [
     "arxiv>=2.1.0",
@@ -48,7 +48,7 @@ testpaths = ["tests"]
 addopts = "-v --cov=arxiv_mcp_server"
 
 [project.scripts]
-arxiv-mcp-server = "arxiv_mcp_server:main"
+arxiv-mcp-server-cuhksz = "arxiv_mcp_server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/arxiv_mcp_server"]

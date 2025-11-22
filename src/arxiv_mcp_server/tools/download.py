@@ -73,8 +73,8 @@ def convert_pdf_to_markdown(paper_id: str, pdf_path: Path) -> None:
             status.status = "success"
             status.completed_at = datetime.now()
 
-        # Clean up PDF after successful conversion
-        logger.info(f"Conversion completed for {paper_id}")
+        # PDF is kept after conversion (not deleted)
+        logger.info(f"Conversion completed for {paper_id}, PDF preserved at {pdf_path}")
 
     except Exception as e:
         logger.error(f"Conversion failed for {paper_id}: {str(e)}")

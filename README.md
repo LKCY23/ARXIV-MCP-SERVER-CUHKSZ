@@ -1,10 +1,5 @@
-[![Twitter Follow](https://img.shields.io/twitter/follow/JoeBlazick?style=social)](https://twitter.com/JoeBlazick)
-[![smithery badge](https://smithery.ai/badge/arxiv-mcp-server)](https://smithery.ai/server/arxiv-mcp-server)
 [![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Tests](https://github.com/blazickjp/arxiv-mcp-server/actions/workflows/tests.yml/badge.svg)](https://github.com/blazickjp/arxiv-mcp-server/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/arxiv-mcp-server.svg)](https://pypi.org/project/arxiv-mcp-server/)
-[![PyPI Version](https://img.shields.io/pypi/v/arxiv-mcp-server.svg)](https://pypi.org/project/arxiv-mcp-server/)
 
 # ArXiv MCP Server
 
@@ -12,12 +7,22 @@
 
 The ArXiv MCP Server provides a bridge between AI assistants and arXiv's research repository through the Model Context Protocol (MCP). It allows AI models to search for papers and access their content in a programmatic way.
 
+## 👥 About This Fork
+
+This repository is maintained by the **港中深智慧校园开发团队**. 
+
+We created this independent repository (rather than forking) to better accommodate our team's specific development needs and workflow requirements. However, we deeply respect and acknowledge the original work by [blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server), upon which this project is based.
+
+## 🙏 Acknowledgments
+
+This project is built upon the excellent work of the original [arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server) project by [@blazickjp](https://github.com/blazickjp) and the Pearl Labs Team. We are grateful for their contributions to the open-source community and for providing a solid foundation for our development work.
+
+**Original Project**: [https://github.com/blazickjp/arxiv-mcp-server](https://github.com/blazickjp/arxiv-mcp-server)
 <div align="center">
   
-🤝 **[Contribute](https://github.com/blazickjp/arxiv-mcp-server/blob/main/CONTRIBUTING.md)** • 
-📝 **[Report Bug](https://github.com/blazickjp/arxiv-mcp-server/issues)**
+📝 **[Report Bug](https://github.com/LKCY23/ARXIV-MCP-SERVER-CUHKSZ/issues)** • 
+🔗 **[Original Project](https://github.com/blazickjp/arxiv-mcp-server)**
 
-<a href="https://www.pulsemcp.com/servers/blazickjp-arxiv-mcp-server"><img src="https://www.pulsemcp.com/badge/top-pick/blazickjp-arxiv-mcp-server" width="400" alt="Pulse MCP Badge"></a>
 </div>
 
 ## ✨ Core Features
@@ -35,22 +40,22 @@ The ArXiv MCP Server provides a bridge between AI assistants and arXiv's researc
 To install ArXiv Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/arxiv-mcp-server):
 
 ```bash
-npx -y @smithery/cli install arxiv-mcp-server --client claude
+npx -y @smithery/cli install arxiv-mcp-server-cuhksz --client claude
 ```
 
 ### Installing Manually
 Install using uv:
 
 ```bash
-uv tool install arxiv-mcp-server
+uv tool install arxiv-mcp-server-cuhksz
 ```
 
 For development:
 
 ```bash
 # Clone and set up development environment
-git clone https://github.com/blazickjp/arxiv-mcp-server.git
-cd arxiv-mcp-server
+git clone https://github.com/LKCY23/ARXIV-MCP-SERVER-CUHKSZ.git
+cd ARXIV-MCP-SERVER-CUHKSZ
 
 # Create and activate virtual environment
 uv venv
@@ -67,12 +72,12 @@ Add this configuration to your MCP client config file:
 ```json
 {
     "mcpServers": {
-        "arxiv-mcp-server": {
+        "arxiv-mcp-server-cuhksz": {
             "command": "uv",
             "args": [
                 "tool",
                 "run",
-                "arxiv-mcp-server",
+                "arxiv-mcp-server-cuhksz",
                 "--storage-path", "/path/to/paper/storage"
             ]
         }
@@ -85,13 +90,13 @@ For Development:
 ```json
 {
     "mcpServers": {
-        "arxiv-mcp-server": {
+        "arxiv-mcp-server-cuhksz": {
             "command": "uv",
             "args": [
                 "--directory",
-                "path/to/cloned/arxiv-mcp-server",
+                "path/to/cloned/ARXIV-MCP-SERVER-CUHKSZ",
                 "run",
-                "arxiv-mcp-server",
+                "arxiv-mcp-server-cuhksz",
                 "--storage-path", "/path/to/paper/storage"
             ]
         }
@@ -189,7 +194,9 @@ Released under the MIT License. See the LICENSE file for details.
 
 <div align="center">
 
-Made with ❤️ by the Pearl Labs Team
+Made with ❤️ by 港中深智慧校园开发团队 (CUHKSZ Smart Campus Development Team)
+
+Based on the original work by [Pearl Labs Team](https://github.com/blazickjp/arxiv-mcp-server)
 
 <a href="https://glama.ai/mcp/servers/04dtxi5i5n"><img width="380" height="200" src="https://glama.ai/mcp/servers/04dtxi5i5n/badge" alt="ArXiv Server MCP server" /></a>
 </div>
